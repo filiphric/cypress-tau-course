@@ -1,0 +1,189 @@
+.ListContainer {
+	display: block;
+	width: 100vw;
+	height: 80vh;
+	overflow: scroll;
+	white-space: nowrap;
+	> .current-target {
+		background-color: $blue-8 !important;
+	}
+	.current-target > * {
+		visibility: hidden;
+	}
+}
+.List {
+	padding-top: 10px;
+	width: $list-width;
+	background-color: $gray-3;
+	border-radius: $border-radius;
+	@include openSansBold($medium, $white);
+	display: inline-block;
+	margin: 0.5% 1.5%;
+  vertical-align: top;
+  .taskTitle {
+    width: 212px;
+    min-height: 18px;
+    display: inline-block;
+    margin: 0 auto 7px 17px;
+    background-color: #E2E4E6;
+    border-radius: 3px;
+    color: #4d4d4d;
+    outline: none;
+    border: none;
+  }
+  .taskTitle:focus {
+    background-color: #FFFFFF;
+  }
+  .options {
+    fill: #959DA1;
+    width: 21px;
+    height: 21px;
+    margin: 5px 8px 0 0;
+    cursor: pointer;
+  }
+  .dropdown {
+    position: relative;
+    display: block;
+    float: right;
+  }
+  .invisible-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1000;
+  }
+  .dropdown-content {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    margin-left: -75px;
+    span {
+      @include openSans($small, $black);
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+    }
+    span:hover {
+      background-color: rgba(0,0,0,0.15);
+    }
+    span.delete {
+      color: #FF220C;
+    }
+  }
+  .show {
+    display: block;
+  }
+	.List_tasks {
+		max-height: 70vh;
+		overflow-y: scroll;
+		margin: 0;
+    padding: 0;
+    min-height: 2px;
+	}
+	.List_addTask {
+		width: $list-item-width;
+		padding: 7px (100% - $list-item-width) / 2;
+		margin: 0;
+		height: auto;
+		text-align: left;
+		cursor: pointer;
+		border-radius: $border-radius;
+		@include openSans($small, $gray-9);
+		&:hover {
+			text-decoration: underline;
+			color: $black;
+			background-color: $gray-5;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+	}
+	.List_newTaskOptions {
+		width: $list-item-width;
+		padding: 10px (100% - $list-item-width) / 2;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	.current-target {
+		background-color: $gray-6 !important;
+	}
+	.current-target > * {
+		visibility: hidden;
+  }
+  
+}
+
+.sortable-chosen {
+  opacity: 0.9;
+}
+
+.sortable-ghost {
+  opacity: 0.4;
+}
+
+.CreateList {
+	@extend .transition;
+	padding: 7px 0;
+	width: $list-width;
+	background-color: $blue-7;
+	border-radius: $border-radius;
+	@include openSansBold($medium, $white);
+	display: inline-block;
+	margin: 0.5% 1.5%;
+	vertical-align: top;
+	cursor: pointer;
+	&:hover {
+		background-color: $blue-8;
+	}
+	.CreateList_title {
+		width: $list-item-width;
+		padding: 5px;
+		min-height: 18px;
+		display: block;
+		margin: 0 auto;
+		@include openSans($medium, $white);
+	}
+	.CreateList_options {
+		width: $list-item-width;
+		padding: 10px $text-space;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+  }
+	.CreateList_input {
+		width: $list-item-width;
+		padding: 5px;
+		min-height: 18px;
+		// display: block;
+		margin: 0 2px 7px 9px;
+		background-color: $gray-3;
+		border-radius: $border-radius;
+		color: $black;
+		outline: none;
+		border: 1px solid $gray-5;
+		box-shadow: inset 0 1px 8px rgba(0,0,0,.15);
+		&:focus {
+			background-color: $gray-3;
+		}
+		&::-webkit-input-placeholder {
+			color: $gray-5;
+		}
+	}
+}
+
+.CreateList-active {
+	@extend .transition;
+	background-color: $gray-3 !important;
+	padding: 10px 0 0 0 !important;
+}

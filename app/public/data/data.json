@@ -1,0 +1,60 @@
+{
+  "boards": [
+    {
+      "name": "groceries",
+      "user": 0,
+      "id": 2305140181,
+      "starred": false,
+      "created": "2021-03-14"
+    }
+  ],
+  "tasks": [
+    {
+      "boardId": 2305140181,
+      "description": "",
+      "completed": false,
+      "listId": 54022349966,
+      "title": "milk",
+      "id": 65829897247,
+      "created": "2021-03-14",
+      "deadline": "2021-03-17",
+      "order": 1
+    },
+    {
+      "boardId": 2305140181,
+      "description": "",
+      "completed": false,
+      "listId": 54022349966,
+      "title": "bread",
+      "id": 10545005531,
+      "created": "2021-03-14",
+      "deadline": "2021-03-17",
+      "order": 0
+    },
+    {
+      "boardId": 2305140181,
+      "description": "",
+      "completed": false,
+      "listId": 651009442,
+      "title": "milk",
+      "id": 43690184817,
+      "created": "2021-03-14",
+      "deadline": "2021-03-17"
+    }
+  ],
+  "users": [],
+  "lists": [
+    {
+      "boardId": 2305140181,
+      "title": "to buy",
+      "id": 54022349966,
+      "created": "2021-03-14"
+    },
+    {
+      "boardId": 2305140181,
+      "title": "done",
+      "id": 651009442,
+      "created": "2021-03-14"
+    }
+  ]
+}

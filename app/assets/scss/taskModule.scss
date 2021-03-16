@@ -1,0 +1,211 @@
+.Overlay {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+.TaskModule {
+	background-color: $gray-3;
+	border-radius: $border-radius;
+	min-height: $card-height;
+	width: $card-width;
+	z-index: 2000;
+	margin: 4% 0;
+  padding: 0;
+  overflow: hidden;
+	.TaskModule_exit {
+		width: 100%;
+		display: block;
+		position: relative;
+		height: 35px;
+		.Cancel {
+			position: absolute;
+			right: 38.7px;
+			top: 10px;
+			margin: 0;
+    }
+    .options {
+      fill: #959DA1;
+      width: 21px;
+      height: 21px;
+      margin: 8px;
+      cursor: pointer;
+    }
+    .dropdown {
+      position: relative;
+      display: block;
+      float: right;
+    }
+    .invisible-overlay {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 1000;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1002;
+      margin-left: -75px;
+      span {
+        @include openSans($small, $black);
+        padding: 10px 16px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+      }
+      span:hover {
+        background-color: rgba(0,0,0,0.15);
+      }
+      span.delete {
+        color: #FF220C;
+      }
+    }
+    .show {
+      display: block;
+    }
+	}
+	.TaskModule_title {
+		color: $black;
+		margin: 0 auto 1px auto;
+	}
+	.TaskModule_list {
+		@include openSans($small, $gray-9);
+		width: $list-item-width;
+		margin: 0 auto;
+		strong {
+			text-decoration: underline;
+		}
+	}
+	.TaskModule_description {
+		@include openSans($small, $gray-9);
+		width: $list-item-width;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+	.TaskModule_descriptionTitle {
+		@include openSans($small, $black);
+		margin: 15px auto 5px auto;
+		width: $list-item-width;
+	}
+	.TaskModule_options {
+		width: $list-item-width;
+		padding: 10px $text-space;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 0 auto;
+  }
+  .dz-message{
+      position: relative;
+      width: 265px;
+      height: 100px;
+      border: 4px dashed #cdd2d4;
+      margin: 0 auto;
+      svg {
+        display: block;
+        margin: auto;
+        padding-top: 8px;
+        fill: #B6BBBF
+      }
+  }
+  .dz-message p{
+    @include openSans($medium, $gray-9);
+    text-align: center;
+  }
+  .vue-dropzone {
+    padding-bottom: 30px;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+  .dz-drag-hover {
+    svg {
+      @extend .transition;
+      fill: $gray-10
+    }
+    .dz-message{
+      @extend .transition;
+      border-color: $gray-10;
+    }
+    .dz-message p{ 
+      @extend .transition;
+      color: $gray-10;
+    }
+  }
+  .imagePreview {
+    img {
+      max-height: 400px;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+      padding-bottom: 14px;
+      padding-top: 8px;
+    }
+    width: 100%;
+		display: block;
+		position: relative;
+		.Cancel {
+			position: absolute;
+			right: 20.7px;
+			top: 15px;
+			margin: 0;
+		}
+  }
+  .dz-preview {
+    display: none;
+  }
+  /* Removes the clear button from date inputs */
+  input[type="date"]::-webkit-clear-button {
+    display: none;
+  }
+
+  /* Removes the spin button */
+  input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+  }
+
+  /* Always display the drop down caret */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+  }
+
+  /* A few custom styles for date inputs */
+  input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    @include openSans($small, $gray-9);
+    border: none;
+    outline: none;
+    background-color: rgba(0,0,0,0);
+    margin: 0px 0 0px 19px;
+    display: inline-block !important;
+    visibility: visible !important;
+    &.overDue {
+      background-color: #E7748D;
+      color: #fff
+    }
+  }
+
+  input[type="date"], focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+}

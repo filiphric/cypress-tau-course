@@ -1,0 +1,87 @@
+nav.Nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: $nav-height;
+	background-color: $blue-7;
+  display: block;
+  z-index: 999;
+	.Nav_boards {
+		position: absolute;
+		left: 10px;
+		top: ($nav-height - 37px) / 2;
+	}
+	.Nav_logo {
+		position: absolute;
+		top: ($nav-height - 27.5px) / 2;
+		left: 50%;
+		margin: 0 0 0 -42px;
+		display: block;
+		overflow: hidden;
+		height: $nav-height / 2;
+	}
+	.Nav_user {
+		position: absolute;
+		right: 10px;
+    top: ($nav-height - 37px) / 2;
+	}
+	.Nav_button {
+		display: block;
+		@include openSans($small, $white);
+		background-color: $blue-5;
+		padding: 10px 12px;
+		border-radius: $border-radius;
+		cursor: pointer;
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #FFF;
+      vertical-align: bottom;
+      margin-bottom: -2px;
+    }
+    .Nav_button {
+      position: relative;
+      display: block;
+      float: right;
+    }
+  }
+  .Nav_button:hover {
+    background-color: $blue-4;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $blue-5;
+    min-width: 110px;
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    margin-left: 17px;
+    margin-top: 10px;
+    span {
+      @include openSans($small, $white);
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+    }
+    span:hover {
+      background-color: $blue-4;
+    }
+  }
+  .show {
+    display: block;
+  }
+  .invisible-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1000;
+  }
+}

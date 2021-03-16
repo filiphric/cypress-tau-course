@@ -1,0 +1,114 @@
+.Task {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: $white;
+	color: $black;
+	border-radius: $border-radius;
+	border: none;
+	outline: none;
+	opacity: 1;
+	width: $list-item-width - 2 * $text-space;
+	padding: 3% $text-space;
+	min-height: 17px;
+	margin: 0 auto $task-space auto;
+	cursor: pointer;
+	@include openSans($small, $black);
+	&:hover {
+		background-color: $gray-1;
+  }
+	.Task_title {
+    display: block;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		width: 100%;
+		@include openSans($small, $black);
+    white-space: normal;
+  }
+  .Task_title.completed {
+    text-decoration: line-through;
+  }
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    -webkit-appearance: none;
+	  appearance: none;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input.checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked.checkmark {
+    background-color: $blue-6;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked.checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  :focus {
+    outline: 0;
+  }
+  
+}
+.overDue {
+  background-color: #E7748D;
+  .Task_title {
+    color: #fff
+  }
+  &:hover {
+    background-color: #E15170;
+  }
+}

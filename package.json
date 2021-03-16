@@ -1,0 +1,22 @@
+{
+  "name": "cypress-tau-course",
+  "version": "1.0.0",
+  "description": "Companion repo for Cypress course on Test automation university",
+  "scripts": {
+    "cy:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run",
+    "start": "cd app && npm start",
+    "postinstall": "cd app && npm install"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "course",
+    "tau"
+  ],
+  "author": "Filip Hric",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.6.0"
+  }
+}

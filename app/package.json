@@ -1,0 +1,45 @@
+{
+  "author": "Filip Hric",
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.11",
+    "axios": "^0.21.1",
+    "browserify": "^17.0.0",
+    "connect-busboy": "0.0.2",
+    "connect-history-api-fallback": "^1.6.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "fs-extra": "^9.0.1",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "json-server": "^0.16.1",
+    "json-server-auth": "^1.2.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.27.0",
+    "require-uncached": "^2.0.0",
+    "sass": "^1.26.8",
+    "sendmail": "^1.6.1",
+    "socket.io": "^2.3.0",
+    "typescript": "^4.0.2",
+    "vue": "^2.6.11",
+    "vue-focus": "^0.1.1",
+    "vue-router": "^3.3.2",
+    "vue-shortkey": "^3.1.7",
+    "vue-socket.io-extended": "^4.0.4",
+    "vue2-dropzone": "^3.6.0",
+    "vuedraggable": "^2.23.2"
+  },
+  "license": "ISC",
+  "name": "trelloapp",
+  "scripts": {
+    "cy:open": "npx cypres open",
+    "start": "grunt dev && node index.js"
+  },
+  "version": "1.0.0"
+}

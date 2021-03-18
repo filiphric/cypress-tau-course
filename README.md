@@ -6,7 +6,9 @@ This is a repo for [Test automation University](https://testautomationu.applitoo
 
 ## Instalation
 `git clone https://github.com/filiphric/cypress-tau-course.git`
+
 `npm install`
+
 `npm start`
 
 And that’s it! You can start learning!

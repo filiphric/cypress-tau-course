@@ -9,7 +9,7 @@ beforeEach(() => {
 it('Chaining commands', () => {
 
   cy
-    .get('[data-cy="task]')
+    .get('[data-cy="task"]')
     .should('be.visible')
 
 });

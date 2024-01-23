@@ -4,7 +4,7 @@ Hello there 👋
 
 This is a repo for [Test automation University course on advanced Cypress](https://testautomationu.applitools.com/advanced-cypress-tutorial/) by [Applitools](http://applitools.com/). It contains all the examples from videos + the application for testing.
 
-## Instalation
+## Installation
 `git clone https://github.com/filiphric/cypress-tau-course.git`
 
 `npm install`
